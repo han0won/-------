@@ -18,7 +18,7 @@ body {
     width: 100%;
     height: 90px;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
     .header-wrap {
         display: flex;
@@ -64,6 +64,123 @@ body {
         .btn-search {
             padding-left: 30px;
         }
+    }
+}
+
+.intro-page,
+.title-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../images/bg/bg-intro.jpg);
+    background-size: cover;
+}
+
+.intro-page {
+    h2 {
+        font-family: 'HakgyoansimWoojuR';
+        font-weight: normal;
+        font-size: 48px;
+        span {
+            font-weight: bold;
+            // transition: ;
+            animation: titlecolor 3s linear infinite alternate;
+        }
+        @keyframes titlecolor {
+            0% {color: #A1B6FF;}
+            33% {color: $point3;}
+            66% {color: $point1}
+            100% {color: white}
+        }
+    }
+}
+.title-page {
+    flex-direction: column;
+    .title-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .text-wrap {
+            display: flex;
+        }
+        p {
+            font-size: 100px;
+            font-weight: 900;
+            color: $point3;
+            -webkit-text-stroke: 2px $point3;
+            // border: 1px solid $point3;
+        }
+        span {
+            color: transparent;
+            // text-shadow: -1px 0 $point3, 0 1px $point3, 1px 0 $point3, 0 -1px $point3;
+        }
+    }
+    .has-animation {
+        position: relative;
+        p, img {
+            opacity: 0;
+        }
+        &.animate-in {
+          p {
+            animation: textHidden 0.1s 1.1s forwards;
+          }
+          &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: 10;
+          }
+          &:before {
+            background-color: $point3;
+          }
+          &:after {
+            background-color: black;
+            animation-delay: .5s;
+          }
+        }
+        &.animation-ltr.animate-in {
+          &:before {
+            animation: revealLTR 1.2s ease;
+          }
+          &:after {
+            animation: revealLTR 1s .6s ease;
+          }
+        }
+    }
+    @keyframes revealLTR {
+        0%{
+          width: 0;
+          left: 0;
+        }
+        65%{
+          width: 100%;
+          left: 0;
+        }
+        100% {
+          width: 0;
+          left: 100%;
+        }
+    }
+    @keyframes textHidden {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+    > p {
+        padding-top: 60px;
+        text-align: center;
+        color: transparent;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(161,182,255,1) 0%, rgba(40,88,255,1) 70%);
+        -webkit-background-clip: text;
+        font-family: 'HakgyoansimWoojuR';
+        font-size: 30px;
+        line-height: 50px;
     }
 }
 

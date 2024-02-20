@@ -6,7 +6,8 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="./assets/css/comm.css">
     <script src="https://kit.fontawesome.com/af95449672.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/comm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="./assets/js/comm.js"></script>
     <title>한국천문연구원</title>
 </head>
 <body>
@@ -109,10 +110,16 @@
                 <h2>우리는 <span>우주</span>에 대한 근원적 의문에 과학으로 답한다.</h2>
             </section>
             <section class="sec title-page">
-                <p>K<span>orea</span></p>
-                <p>A<span>stronomy and</span></p>
-                <p>S<span>pace Science</span></p>
-                <p>I<span>nstitute</span></p>
+                <div class="title-text">
+                    <div class="text-wrap">
+                        <p class="has-animation animation-ltr">K<span>orea</span>&nbsp;</p>
+                        <p class="has-animation animation-ltr" data-delay="300">A<span>stronomy and</span></p>
+                    </div>
+                    <div class="text-wrap">
+                        <p class="has-animation animation-ltr" data-delay="600">S<span>pace Science</span>&nbsp;</p>
+                        <p class="has-animation animation-ltr" data-delay="900">I<span>nstitute</span></p>
+                    </div>
+                </div>
                 <p>
                     별과 우주를 사랑하는 사람들에게<br>
                     다가오는 미래에 대하여<br>
