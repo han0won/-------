@@ -25,6 +25,7 @@ body {
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
+        padding: 0 20px;
         max-width: 1280px;
         height: 100%;
     }
@@ -84,7 +85,6 @@ body {
         font-size: 48px;
         span {
             font-weight: bold;
-            // transition: ;
             animation: titlecolor 3s linear infinite alternate;
         }
         @keyframes titlecolor {
@@ -109,21 +109,21 @@ body {
             font-weight: 900;
             color: $point3;
             -webkit-text-stroke: 2px $point3;
-            // border: 1px solid $point3;
         }
         span {
             color: transparent;
-            // text-shadow: -1px 0 $point3, 0 1px $point3, 1px 0 $point3, 0 -1px $point3;
         }
     }
-    .has-animation {
+    .ani-title {
         position: relative;
-        p, img {
-            opacity: 0;
-        }
+        p,
+        p > span
+            {
+                opacity: 0;
+            }
         &.animate-in {
           p {
-            animation: textHidden 0.1s 1.1s forwards;
+            animation: blackbox 0.1s 1.1s forwards;
           }
           &:before, &:after {
             content: '';
@@ -141,16 +141,16 @@ body {
             animation-delay: .5s;
           }
         }
-        &.animation-ltr.animate-in {
+        &.ani-box.animate-in {
           &:before {
-            animation: revealLTR 1.2s ease;
+            animation: bluebox .6s 1.2s ease;
           }
           &:after {
-            animation: revealLTR 1s .6s ease;
+            animation: bluebox 1s .6s ease;
           }
         }
     }
-    @keyframes revealLTR {
+    @keyframes bluebox {
         0%{
           width: 0;
           left: 0;
@@ -164,7 +164,7 @@ body {
           left: 100%;
         }
     }
-    @keyframes textHidden {
+    @keyframes blackbox {
         0% {
           opacity: 0;
         }
@@ -183,6 +183,97 @@ body {
         line-height: 50px;
     }
 }
+
+.sec {
+    .inner-role,
+    .inner-dev {
+        display: flex;
+        margin: 0 auto;
+        padding: 200px 20px;
+        max-width: 1280px;
+    }
+    h3 {
+        font-size: 40px;
+        font-family: 'HakgyoansimWoojuR';
+        font-weight: normal;
+        line-height: 1.2;
+    }
+    h4 {
+        color: $point2;
+        font-size: 18px;
+        font-weight: 200;
+    }
+    .title-wrap {
+        width: 45%;
+    }
+    .cont-wrap {
+        width: 55%;
+    }
+}
+.role-page {
+    background-image: url(../../images/bg/bg-role.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    .cont-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .roles {
+        position: relative;
+        width: 330px;
+        height: 330px;
+        &::before {
+            content: "";
+            display: block;
+            width: 330px;
+            height: 330px;
+            background-image: url(../../images/circle-lg.png);
+            animation: roundcircle 16s linear infinite;
+        }
+        @keyframes roundcircle {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+    }
+    .role {
+        display: flex;
+        justify-content: center;
+        // width: 330px;
+        // height: 330px;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 330px;
+            height: 330px;
+            background-image: url(../../images/circle-sm.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: roundcircle2 24s linear infinite;
+        }
+        @keyframes roundcircle2 {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+    }
+    .role-right {
+        padding-left: 51%;
+    }
+    p {
+        position: absolute;
+        top: 40%;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
 
 #footer {
     display: flex;
