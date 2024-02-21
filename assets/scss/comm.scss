@@ -239,34 +239,34 @@ body {
             0% {transform: rotate(0deg);}
             100% {transform: rotate(360deg);}
         }
-    }
-    .role {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        display: flex;
-        justify-content: center;
-        width: 300px;
-        height: 300px;
-        &:hover {
-            background: linear-gradient(180deg, rgba(161,182,255,1) 0%, rgba(161,182,255,1) 36%, rgba(104,146,255,1) 100%);
-            border-radius: 50%;
-            box-shadow: 0 0 10px 1px $point1;
-        }
-        &::before {
-            content: "";
-            display: block;
+        .role {
             position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            justify-content: center;
             width: 300px;
             height: 300px;
-            background-image: url(../../images/circle-sm.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            animation: roundcircle2 30s linear infinite;
-        }
-        @keyframes roundcircle2 {
-            0% {transform: rotate(0deg);}
-            100% {transform: rotate(360deg);}
+            &:hover {
+                background: linear-gradient(180deg, rgba(161,182,255,1) 0%, rgba(161,182,255,1) 36%, rgba(104,146,255,1) 100%);
+                border-radius: 50%;
+                box-shadow: 0 0 10px 1px $point1;
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                background-image: url(../../images/circle-sm.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                animation: roundcircle2 30s linear infinite;
+            }
+            @keyframes roundcircle2 {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(360deg);}
+            }
         }
     }
     .role-right {
@@ -416,9 +416,9 @@ body {
         height: 90px;
         display: flex;
         align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
         &:last-child {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
         &:hover {
             color: black;
@@ -476,6 +476,36 @@ body {
     }
 }
 
+.moving-list{
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    .site-wrap {
+        display: flex;
+        align-items: center;
+        gap: 300px;
+        height: 70px;
+        animation: movinglist 30s linear infinite;
+    }
+    @keyframes movinglist {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    .list-wrap {
+        display: flex;
+        gap: 50px;
+        img {
+            height: 38px;
+            object-fit: cover;
+        }
+    }
+}
+
 
 #footer {
     display: flex;
@@ -484,8 +514,9 @@ body {
     width: 100%;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 300;
+    text-align: center;
     .f-logo {
-        padding: 30px 0;
+        padding: 40px 0;
         filter: grayscale(100%);
     }
     .f-menu-wrap {
@@ -504,7 +535,7 @@ body {
     .sns-wrap {
         display: flex;
         gap: 20px;
-        padding: 60px 0;
+        padding: 40px 0;
         .sns-box {
             width: 42px;
             height: 42px;
