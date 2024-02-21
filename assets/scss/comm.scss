@@ -456,6 +456,23 @@ body {
     }
 }
 
+.contest-page {
+    .sec-inner {
+        display: block;
+    }
+    .slide-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 380px;
+        height: 600px;
+        p {
+            position: absolute;
+            z-index: 100;
+        }
+    }
+}
+
 
 
 

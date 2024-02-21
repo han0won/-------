@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(this).addClass('animate-in');
       });
     });
-  });
+});
   
 // 연구분야 섹션 커서 이미지
 document.addEventListener('DOMContentLoaded', function() {
@@ -30,5 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
       cursor.style.left = x + 'px';
       cursor.style.top = y + 'px';
     });
+  });
+});
+
+$(document).ready(function() {
+  $('.contest-slide').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1
   });
 });
