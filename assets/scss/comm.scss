@@ -353,6 +353,7 @@ body {
                 margin: 35px 0;
                 width: 260px;
                 height: 350px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
                 border-radius: 10px;
                 color: whitesmoke;
                 background-image: url(../../images/years-card1.jpg);
@@ -361,6 +362,7 @@ body {
                 background-repeat: no-repeat;
             }
             strong {
+                position: relative;
                 color: $point2;
                 font-size: 48px;
                 font-weight: 500;
@@ -368,7 +370,7 @@ body {
             }
             p {
                 text-align: center;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 300;
                 line-height: 2;
                 span {
@@ -385,20 +387,10 @@ body {
                 height: 50px;
                 border: 2px solid $point2;
                 border-radius: 50px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 100;
-                    display: block;
-                    width: 170px;
-                    height: 170px;
-                    color: $point2;
-                    border-radius: 50%;
-                }
-                &:hover &::after {
-                    display: block;
+                background: rgba(161, 182, 255, 0.2);
+                transition: all 0.3s;
+                &:hover {
+                    background: $point2;
                 }
                 p {
                     padding-top: 8px;
@@ -459,22 +451,30 @@ body {
 .contest-page {
     .sec-inner {
         display: block;
+        padding-bottom: 40px;
     }
     .slide-wrap {
         position: relative;
         display: flex;
         flex-direction: column;
+        padding: 0 10px;
         width: 380px;
-        height: 600px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
         p {
             position: absolute;
+            left: 30px;
+            bottom: 15px;
             z-index: 100;
+            font-size: 18px;
+            font-weight: 300;
         }
     }
 }
-
-
-
 
 
 #footer {

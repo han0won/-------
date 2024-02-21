@@ -35,8 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function() {
   $('.contest-slide').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1
+    autoplay: true,
+    autoplaySpeed: 1500,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
   });
 });
