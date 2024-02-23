@@ -75,10 +75,12 @@ body {
   position: absolute;
   z-index: 2000;
   pointer-events: none;
+  overflow: hidden;
 }
 .default-cursor img {
   pointer-events: none;
   transform-origin: center;
+  overflow: hidden;
   animation: roundcursor 5s linear infinite;
 }
 @keyframes roundcursor {
@@ -435,10 +437,13 @@ body {
   background: #A1B6FF;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 .dev-page .dev-box:hover {
   box-shadow: inset 0 -150px 100px -100px rgba(0, 0, 0, 0.5);
+}
+.dev-page .dev-box:hover strong {
+  color: #2858FF;
 }
 .dev-page .text-wrap {
   display: flex;
@@ -673,6 +678,23 @@ body {
 }
 .contest-page .slide-wrap .slide-text span {
   font-weight: 100;
+}
+
+.end-title {
+  padding: 100px 0 250px;
+  text-align: center;
+  background-image: url(../../images/bg/bg-dev.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+.end-title p {
+  font-family: "HakgyoansimWoojuR";
+  font-size: 36px;
+  line-height: 2;
+}
+.end-title span {
+  animation: titlecolor 3s linear infinite alternate;
 }
 
 .moving-list {

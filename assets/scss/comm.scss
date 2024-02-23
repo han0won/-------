@@ -13,9 +13,11 @@
     position: absolute;
     z-index: 2000;
     pointer-events: none;
+    overflow: hidden;
     img {
         pointer-events: none;
         transform-origin: center;
+        overflow: hidden;
         animation: roundcursor 5s linear infinite;
         @keyframes roundcursor {
             0% {transform: rotate(0deg);}
@@ -360,9 +362,12 @@
         border: 1px solid rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         // box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
-        transition: all 0.2s;
+        transition: all 0.1s;
         &:hover {
             box-shadow: inset 0 -150px 100px -100px rgba(0, 0, 0, 0.5);
+            strong {
+                color: $point3;
+            }
         }
     }
     .text-wrap {
@@ -583,7 +588,7 @@
         }
         a:hover {
             .slide-text {
-            display: block;
+                display: block;
             }
         }
         .slide-text {
@@ -601,6 +606,23 @@
                 font-weight: 100;
             }
         }
+    }
+}
+
+.end-title {
+    padding: 100px 0 250px;
+    text-align: center;
+    background-image: url(../../images/bg/bg-dev.jpg);
+    background-size: cover;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    p {
+        font-family: 'HakgyoansimWoojuR';
+        font-size: 36px;
+        line-height: 2;
+    }
+    span {
+        animation: titlecolor 3s linear infinite alternate;
     }
 }
 
