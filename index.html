@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/comm.css">
     <script src="https://kit.fontawesome.com/af95449672.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -12,119 +13,123 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="./assets/js/comm.js"></script>
     <title>한국천문연구원</title>
 </head>
 <body>
     <div class="wrap">
         <header id="header">
-            <div class="header-wrap">
-                <h1 class="logo">
-                    <span class="screen-out">한국천문연구원</span>
-                    <a href="#">
-                        <img src="./images/logo/logo.png" alt="한국천문연구원">
-                    </a>
-                </h1>
-                <nav id="gnb">
-                    <ul class="depth1">
-                        <li>
-                            <a href="#">연구원 소개</a>
-                            <ul class="depth2">
-                                <li><a href="#">인사말</a></li>
-                                <li><a href="#">기관개요</a></li>
-                                <li><a href="#">조직 및 업무안내</a></li>
-                                <li><a href="#">연구시설</a></li>
-                                <li><a href="#">오시는길</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">연구분야</a>
-                            <ul class="depth2">
-                                <li><a href="#">광학천문</a></li>
-                                <li><a href="#">전파천문</a></li>
-                                <li><a href="#">우주과학</a></li>
-                                <li><a href="#">우주위험감시</a></li>
-                                <li><a href="#">이론천문</a></li>
-                                <li><a href="#">천문우주기술</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">연구성과</a>
-                            <ul class="depth2">
-                                <li><a href="#">논문</a></li>
-                                <li><a href="#">특허</a></li>
-                                <li><a href="#">기술보고서</a></li>
-                                <li><a href="#">천문우주기술</a></li>
-                                <li><a href="#">기술이전상담</a></li>
-                                <li><a href="#">중소기업지원</a></li>
-                                <li><a href="#">연구장비공동활용</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">학술정보</a>
-                            <ul class="depth2">
-                                <li><a href="#">콜로퀴움</a></li>
-                                <li><a href="#">워크숍/세미나</a></li>
-                                <li><a href="#">저널클럽</a></li>
-                                <li><a href="#">방문연구자</a></li>
-                                <li><a href="#">IAU100</a></li>
-                                <li><a href="#">정책정보</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">과학문화</a>
-                            <ul class="depth2">
-                                <li><a href="#">교원천문연수</a></li>
-                                <li><a href="#">천체사진공모전</a></li>
-                                <li><a href="#">천체관측축제</a></li>
-                                <li><a href="#">외계행성이름짓기</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">고객참여</a>
-                            <ul class="depth2">
-                                <li><a href="#">알림사항</a></li>
-                                <li><a href="#">보도자료</a></li>
-                                <li><a href="#">포토갤러리</a></li>
-                                <li><a href="#">동영상</a></li>
-                                <li><a href="#">발행물</a></li>
-                                <li><a href="#">인재채용</a></li>
-                                <li><a href="#">민원/건의/신고</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">정보공개</a>
-                            <ul class="depth2">
-                                <li><a href="#">정보공개</a></li>
-                                <li><a href="#">경영공시</a></li>
-                                <li><a href="#">청렴정보공개</a></li>
-                                <li><a href="#">내·외부감사결과</a></li>
-                                <li><a href="#">사업실명제</a></li>
-                            </ul>
-                        </li>
-                        <button type="button" class="btn-search">
-                            <span class="screen-out">검색창 열기</span>
-                            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
-                        </button>
-                    </ul>
-                </nav>
+            <div class="header-inner">
+                <div class="header-wrap">
+                    <h1 class="logo">
+                        <span class="screen-out">한국천문연구원</span>
+                        <a href="#">
+                            <img src="./images/logo/logo.png" alt="한국천문연구원">
+                        </a>
+                    </h1>
+                    <nav id="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#">연구원 소개</a>
+                                    <ul class="depth2">
+                                        <li><a href="#">인사말</a></li>
+                                        <li><a href="#">기관개요</a></li>
+                                        <li><a href="#">조직 및 업무안내</a></li>
+                                        <li><a href="#">연구시설</a></li>
+                                        <li><a href="#">오시는길</a></li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <a href="#">연구분야</a>
+                                <ul class="depth2">
+                                    <li><a href="#">광학천문</a></li>
+                                    <li><a href="#">전파천문</a></li>
+                                    <li><a href="#">우주과학</a></li>
+                                    <li><a href="#">우주위험감시</a></li>
+                                    <li><a href="#">이론천문</a></li>
+                                    <li><a href="#">천문우주기술</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">연구성과</a>
+                                <ul class="depth2">
+                                    <li><a href="#">논문</a></li>
+                                    <li><a href="#">특허</a></li>
+                                    <li><a href="#">기술보고서</a></li>
+                                    <li><a href="#">천문우주기술</a></li>
+                                    <li><a href="#">기술이전상담</a></li>
+                                    <li><a href="#">중소기업지원</a></li>
+                                    <li><a href="#">연구장비공동활용</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">학술정보</a>
+                                <ul class="depth2">
+                                    <li><a href="#">콜로퀴움</a></li>
+                                    <li><a href="#">워크숍/세미나</a></li>
+                                    <li><a href="#">저널클럽</a></li>
+                                    <li><a href="#">방문연구자</a></li>
+                                    <li><a href="#">IAU100</a></li>
+                                    <li><a href="#">정책정보</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">과학문화</a>
+                                <ul class="depth2">
+                                    <li><a href="#">교원천문연수</a></li>
+                                    <li><a href="#">천체사진공모전</a></li>
+                                    <li><a href="#">천체관측축제</a></li>
+                                    <li><a href="#">외계행성이름짓기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">고객참여</a>
+                                <ul class="depth2">
+                                    <li><a href="#">알림사항</a></li>
+                                    <li><a href="#">보도자료</a></li>
+                                    <li><a href="#">포토갤러리</a></li>
+                                    <li><a href="#">동영상</a></li>
+                                    <li><a href="#">발행물</a></li>
+                                    <li><a href="#">인재채용</a></li>
+                                    <li><a href="#">민원/건의/신고</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">정보공개</a>
+                                <ul class="depth2">
+                                    <li><a href="#">정보공개</a></li>
+                                    <li><a href="#">경영공시</a></li>
+                                    <li><a href="#">청렴정보공개</a></li>
+                                    <li><a href="#">내·외부감사결과</a></li>
+                                    <li><a href="#">사업실명제</a></li>
+                                </ul>
+                            </li>
+                            <button type="button" class="btn-search">
+                                <span class="screen-out">검색창 열기</span>
+                                <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                            </button>
+                        </ul>
+                    </nav>
+                </div>
             </div>
+            <div class="depth2-bg"></div>
         </header>
         <main class="main-cont">
             <section class="intro-page">
-                <h2>우리는 <span>우주</span>에 대한 근원적 의문에 과학으로 답한다.</h2>
+                <div class="typing-wrap">
+                    <h2>우리는&nbsp;<span>우주</span>에&nbsp;대한&nbsp;근원적&nbsp;의문에&nbsp;과학으로&nbsp;답한다.</h2>
+                </div>
             </section>
             <section class="title-page">
-                <div class="title-text">
                     <div class="text-wrap">
                         <p class="ani-title ani-box">K<span>orea</span>&nbsp;</p>
-                        <p class="ani-title ani-box"" data-delay="300">A<span>stronomy and</span></p>
+                        <p class="ani-title ani-box" data-delay="300">A<span>stronomy and</span></p>
                     </div>
                     <div class="text-wrap">
-                        <p class="ani-title ani-box"" data-delay="600">S<span>pace Science</span>&nbsp;</p>
-                        <p class="ani-title ani-box"" data-delay="900">I<span>nstitute</span></p>
+                        <p class="ani-title ani-box" data-delay="600">S<span>pace Science</span>&nbsp;</p>
+                        <p class="ani-title ani-box" data-delay="900">I<span>nstitute</span></p>
                     </div>
-                </div>
                 <p>
                     별과 우주를 사랑하는 사람들에게<br>
                     다가오는 미래에 대하여<br>
@@ -514,5 +519,14 @@
             </p>
         </footer>
     </div>
+    <script type="text/javascript">
+        let s = skrollr.init();
+    
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageXOffset || window.scrollY;
+    
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        });    
+    </script>
 </body>
 </html>
