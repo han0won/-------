@@ -1,3 +1,5 @@
+AOS.init();
+
 // 헤더
 document.addEventListener("DOMContentLoaded", function() {
   const gnb = document.getElementById("gnb");
@@ -28,21 +30,20 @@ $(document).ready(function() {
   }).scroll(); 
 });
 
-
 // 연구분야 섹션 커서 이미지
 document.addEventListener('DOMContentLoaded', function() {
-  var hoverImgs = document.querySelectorAll('.hover-img'); // 모든 hover-img 클래스를 가진 요소를 선택합니다.
+  var hoverImgs = document.querySelectorAll('.hover-img'); 
 
   hoverImgs.forEach(function(link) {
-    var cursor = link.querySelector('.img-cursor'); // 현재 요소 내의 img-cursor 클래스를 가진 요소를 선택합니다.
+    var cursor = link.querySelector('.img-cursor'); 
     var cursorImg = cursor.querySelector('img');
 
     link.addEventListener('mouseenter', function() {
-      cursorImg.style.display = 'block'; // 이미지를 보이도록 설정
+      cursorImg.style.display = 'block'; 
     });
 
     link.addEventListener('mouseleave', function() {
-      cursorImg.style.display = 'none'; // 이미지를 숨김
+      cursorImg.style.display = 'none'; 
     });
 
     document.addEventListener('mousemove', function(e) {
@@ -68,3 +69,5 @@ $(document).ready(function() {
     variableWidth: true
   });
 });
+
+
