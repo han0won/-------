@@ -1,8 +1,8 @@
 AOS.init();
 
 document.addEventListener('mousemove', (e) => {
-  let mouseX = e.pageX - 20; // document의 x좌표값
-  let mouseY = e.pageY - 15; // document의 y좌표값
+  let mouseX = e.pageX - 25; // document의 x좌표값
+  let mouseY = e.pageY - 20; // document의 y좌표값
 
   let defaultCursor = document.querySelector('.default-cursor');
   defaultCursor.style.left = mouseX + 'px';
