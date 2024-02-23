@@ -1,5 +1,14 @@
 AOS.init();
 
+document.addEventListener('mousemove', (e) => {
+  let mouseX = e.pageX - 20; // document의 x좌표값
+  let mouseY = e.pageY - 15; // document의 y좌표값
+
+  let defaultCursor = document.querySelector('.default-cursor');
+  defaultCursor.style.left = mouseX + 'px';
+  defaultCursor.style.top = mouseY + 'px';
+})
+
 // 헤더
 document.addEventListener("DOMContentLoaded", function() {
   const gnb = document.getElementById("gnb");

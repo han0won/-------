@@ -62,13 +62,32 @@ body {
   color: white;
 }
 
-body .screen-out {
+.screen-out {
   position: absolute;
   width: 0;
   height: 0;
   overflow: hidden;
   line-height: 0;
   text-indent: -9999px;
+}
+
+.default-cursor {
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+}
+.default-cursor img {
+  pointer-events: none;
+  transform-origin: center;
+  animation: roundcursor 5s linear infinite;
+}
+@keyframes roundcursor {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #header {
