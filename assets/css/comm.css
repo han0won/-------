@@ -152,7 +152,6 @@ body .screen-out {
   background-position: bottom;
 }
 
-.intro-page,
 .title-page {
   display: flex;
   justify-content: center;
@@ -167,23 +166,34 @@ body .screen-out {
   display: grid;
   place-items: center;
 }
+.intro-page .video-background {
+  display: flex;
+}
+.intro-page .video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
 .intro-page .typing-wrap {
-  animation: typing 3s steps(28);
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  z-index: 100;
+  animation: typing 3s steps(28);
 }
 @keyframes typing {
   from {
     width: 0;
   }
 }
-.intro-page h2 {
+.intro-page .typing-wrap h2 {
   font-family: "HakgyoansimWoojuR";
   font-weight: normal;
   font-size: 48px;
 }
-.intro-page h2 span {
+.intro-page .typing-wrap h2 span {
   font-weight: bold;
   animation: titlecolor 3s linear infinite alternate;
 }

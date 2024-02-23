@@ -12,24 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-// $(document).ready(function() {
-//   $('.ani-title').each(function(index) {
-//     $(this).delay($(this).data('delay')).queue(function(){
-//       $(this).addClass('animate-in');
-//     });
-//   });
-// });
-
-
-// 타이틀섹션 테스트 . . . 
-
+// 타이틀 섹션 텍스트 나타나는 효과
 $(document).ready(function() {
   $(window).scroll(function() {
     var windowTop = $(this).scrollTop();
     var titlePageTop = $('.title-page').offset().top;
-    
-    // If the top of the window is at least the top of the title-page
+
     if (windowTop >= titlePageTop) {
       $('.ani-title').each(function(index) {
         $(this).delay($(this).data('delay')).queue(function(){
@@ -37,16 +25,10 @@ $(document).ready(function() {
         });
       });
     }
-  }).scroll(); // Trigger scroll event initially
+  }).scroll(); 
 });
 
 
-
-// 타이틀섹션 테스트 . . . (끝)
-
-
-
-  
 // 연구분야 섹션 커서 이미지
 document.addEventListener('DOMContentLoaded', function() {
   var hoverImgs = document.querySelectorAll('.hover-img'); // 모든 hover-img 클래스를 가진 요소를 선택합니다.
@@ -73,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// 컨테스트 섹션 슬라이드
 $(document).ready(function() {
   $('.contest-slide').slick({
     autoplay: true,
