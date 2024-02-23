@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // 컨테스트 섹션 슬라이드
 $(document).ready(function() {
   $('.contest-slide').slick({
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1500,
     dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     centerMode: true,
-    variableWidth: true
+    variableWidth: true,
   });
 });
 
