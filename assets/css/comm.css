@@ -119,14 +119,16 @@ body .screen-out {
 }
 #header #gnb .depth2 {
   position: absolute;
-  top: 123px;
+  top: 90px;
   left: 0px;
   right: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   padding: 0 20px;
+  height: 100%;
   max-width: 1280px;
   visibility: hidden;
   text-align: center;
@@ -135,6 +137,9 @@ body .screen-out {
 #header #gnb .depth2 li {
   padding: 0 30px;
   font-size: 14px;
+}
+#header #gnb .depth2 li:hover a {
+  color: #A1B6FF;
 }
 #header #gnb .depth1 li:hover .depth2 {
   visibility: visible;
@@ -145,20 +150,13 @@ body .screen-out {
 #header .depth2-bg {
   position: fixed;
   top: 90px;
+  left: 0;
   display: none;
   width: 100%;
   height: 90px;
-  background-image: url(../../images/bg/bg-dev.jpg);
-  background-position: bottom;
-}
-
-.title-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url(../../images/bg/bg-intro.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/bg/bg-depth2.jpg);
   background-size: cover;
+  background-position: bottom;
 }
 
 .intro-page {
@@ -213,11 +211,14 @@ body .screen-out {
 }
 
 .title-page {
-  flex-direction: column;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-top: 100px;
+  height: 100vh;
+  background-image: url(../../images/bg/bg-intro.jpg);
+  background-size: cover;
 }
 .title-page .text-wrap {
   display: flex;
