@@ -803,9 +803,9 @@ body {
 }
 
 .end-title {
-  padding: 100px 0 250px;
+  padding: 200px 0 180px;
   text-align: center;
-  background-image: url(../../images/bg/bg-dev.jpg);
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.7)), url(../../images/bg/bg-end.jpg);
   background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
@@ -860,7 +860,7 @@ body {
   text-align: center;
 }
 #footer .f-logo {
-  padding: 40px 0;
+  padding: 50px 0 50px;
   filter: grayscale(100%);
 }
 #footer .f-menu-wrap {
