@@ -250,7 +250,6 @@
 }
 
 .sec {
-    height: 100vh;
     overflow: hidden;
     .sec-inner {
         display: flex;
@@ -270,25 +269,59 @@
         font-weight: 200;
     }
     .title-wrap {
-        width: 45%;
+        position: absolute;
     }
     .cont-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        width: 55%;
+        padding: 250px 0 150px 530px;
     }
 }
 .role-page {
-    background-image: url(../../images/bg/bg-role.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
+    position: relative;
+    .role-area {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        .role-bg {
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-image: url(../../images/bg/bg-role.jpg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+        }
+    }
+    .page-fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .role-inner {
+        position: relative;
+        margin: 0 auto;
+        padding: 200px 0;
+        max-width: 1280px;
+        z-index: 1;
+    }
+    .roles-list {
+        margin-top: 100px;
+        width: 700px;
+    }
     .roles {
+        float: left;
         position: relative;
         width: 330px;
         height: 330px;
         border-radius: 50%;
         transition: all 0.2s;
+        &:nth-child(2){
+            margin-top: 330px;
+            margin-right: 0;
+        }
+        &:nth-child(4){
+            margin-top: 330px;
+            margin-bottom: 200px;
+            margin-right: 0;
+        }
         &:hover {
             background: transparent;
             border-radius: 50%;
@@ -337,32 +370,69 @@
                 100% {transform: rotate(-360deg);}
             }
         }
-    }
-    .role-right {
-        padding-left: 51%;
-    }
-    p {
-        position: absolute;
-        top: 39%;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 1.7;
+        p {
+            position: absolute;
+            top: 39%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
     }
 }
 .dev-page {
-    background-image: url(../../images/bg/bg-dev.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
+    position: relative;
+    .dev-area {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        .dev-bg {
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-image: url(../../images/bg/bg-dev.jpg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+        }
+    }
+    .page-fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .dev-inner {
+        position: relative;
+        margin: 0 auto;
+        padding: 200px 0;
+        max-width: 1280px;
+        z-index: 1;
+    }
+    .dev-list {
+        margin-top: 100px;
+        width: 700px;
+    }
     .dev-box {
+        float: left;
+        position: relative;
         padding: 40px;
         width: 300px;
         height: 400px;
         background: $point1;
         border: 1px solid rgba(0, 0, 0, 0.5);
         border-radius: 20px;
-        // box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
         transition: all 0.1s;
+        &:nth-child(2){
+            margin-top: 500px;
+            margin-right: 0;
+        }
+        &:nth-child(3){
+            margin-top: 100px;
+        }
+        &:nth-child(4){
+            margin-top: 600px;
+            margin-bottom: 200px;
+            margin-right: 0;
+        }
         &:hover {
             box-shadow: inset 0 -150px 100px -100px rgba(0, 0, 0, 0.5);
             strong {
@@ -383,9 +453,6 @@
         p {
             font-weight: 300;
         }
-    }
-    .dev-right {
-        padding-left: 56%;
     }
     .dev-card1 {
         background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../../images/dev-card1.jpg);
@@ -414,13 +481,25 @@
 }
 
 .years-page {
+    position: relative;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    .years-area {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        .years-bg {
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
     .years-wrap {
         display: flex;
         justify-content: center;
@@ -428,8 +507,10 @@
         padding: 0 20px;
         max-width: 1280px;
         width: 100%;
-        h3,
-        .box-wrap {
+        .btn-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 50%;
         }
         h3 {
@@ -437,11 +518,35 @@
             text-align: center;
             line-height: 1.3;
         }
+        .btn-40years {
+            padding-top: 35px;
+            a {
+                position: relative;
+                display: block;
+                padding: 5px 20px;
+                width: 185px;
+                height: 50px;
+                border: 2px solid $point2;
+                border-radius: 50px;
+                background: rgba(161, 182, 255, 0.2);
+                transition: all 0.3s;
+                &:hover {
+                    background: $point2;
+                }
+                p {
+                    padding-top: 8px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 200;
+                }
+            }
+        }
         .box-wrap {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 50%;
         }
         .year-box {
             display: flex;
@@ -473,28 +578,6 @@
                 line-height: 2;
                 span {
                     font-weight: 500;
-                }
-            }
-        }
-        .btn-40years {
-            padding-top: 35px;
-            a {
-                position: relative;
-                display: block;
-                padding: 5px 20px;
-                height: 50px;
-                border: 2px solid $point2;
-                border-radius: 50px;
-                background: rgba(161, 182, 255, 0.2);
-                transition: all 0.3s;
-                &:hover {
-                    background: $point2;
-                }
-                p {
-                    padding-top: 8px;
-                    text-align: center;
-                    font-size: 14px;
-                    font-weight: 200;
                 }
             }
         }

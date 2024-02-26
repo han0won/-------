@@ -54,6 +54,7 @@ a:link, a:visited, a:active, a:hover {
 }
 
 body {
+  overflow-x: hidden;
   width: 100%;
   background: black;
   font-size: 16px;
@@ -315,7 +316,6 @@ body {
 }
 
 .sec {
-  height: 100vh;
   overflow: hidden;
 }
 .sec .sec-inner {
@@ -336,26 +336,60 @@ body {
   font-weight: 200;
 }
 .sec .title-wrap {
-  width: 45%;
+  position: absolute;
 }
 .sec .cont-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 55%;
+  padding: 250px 0 150px 530px;
 }
 
 .role-page {
+  position: relative;
+}
+.role-page .role-area {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.role-page .role-area .role-bg {
+  top: 0;
+  left: 0;
+  height: 100%;
   background-image: url(../../images/bg/bg-role.jpg);
-  background-position: bottom;
+  background-position: 50%;
   background-repeat: no-repeat;
 }
+.role-page .page-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.role-page .role-inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 200px 0;
+  max-width: 1280px;
+  z-index: 1;
+}
+.role-page .roles-list {
+  margin-top: 100px;
+  width: 700px;
+}
 .role-page .roles {
+  float: left;
   position: relative;
   width: 330px;
   height: 330px;
   border-radius: 50%;
   transition: all 0.2s;
+}
+.role-page .roles:nth-child(2) {
+  margin-top: 330px;
+  margin-right: 0;
+}
+.role-page .roles:nth-child(4) {
+  margin-top: 330px;
+  margin-bottom: 200px;
+  margin-right: 0;
 }
 .role-page .roles:hover {
   background: transparent;
@@ -413,10 +447,7 @@ body {
     transform: rotate(-360deg);
   }
 }
-.role-page .role-right {
-  padding-left: 51%;
-}
-.role-page p {
+.role-page .roles p {
   position: absolute;
   top: 39%;
   text-align: center;
@@ -426,11 +457,40 @@ body {
 }
 
 .dev-page {
+  position: relative;
+}
+.dev-page .dev-area {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.dev-page .dev-area .dev-bg {
+  top: 0;
+  left: 0;
+  height: 100%;
   background-image: url(../../images/bg/bg-dev.jpg);
-  background-position: bottom;
+  background-position: 50%;
   background-repeat: no-repeat;
 }
+.dev-page .page-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.dev-page .dev-inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 200px 0;
+  max-width: 1280px;
+  z-index: 1;
+}
+.dev-page .dev-list {
+  margin-top: 100px;
+  width: 700px;
+}
 .dev-page .dev-box {
+  float: left;
+  position: relative;
   padding: 40px;
   width: 300px;
   height: 400px;
@@ -438,6 +498,18 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   transition: all 0.1s;
+}
+.dev-page .dev-box:nth-child(2) {
+  margin-top: 500px;
+  margin-right: 0;
+}
+.dev-page .dev-box:nth-child(3) {
+  margin-top: 100px;
+}
+.dev-page .dev-box:nth-child(4) {
+  margin-top: 600px;
+  margin-bottom: 200px;
+  margin-right: 0;
 }
 .dev-page .dev-box:hover {
   box-shadow: inset 0 -150px 100px -100px rgba(0, 0, 0, 0.5);
@@ -458,9 +530,6 @@ body {
 }
 .dev-page .text-wrap p {
   font-weight: 300;
-}
-.dev-page .dev-right {
-  padding-left: 56%;
 }
 .dev-page .dev-card1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../../images/dev-card1.jpg);
@@ -488,9 +557,21 @@ body {
 }
 
 .years-page {
+  position: relative;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.years-page .years-area {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+.years-page .years-area .years-bg {
+  top: 0;
+  left: 0;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg1.jpg);
   background-size: cover;
   background-position: center;
@@ -504,8 +585,10 @@ body {
   max-width: 1280px;
   width: 100%;
 }
-.years-page .years-wrap h3,
-.years-page .years-wrap .box-wrap {
+.years-page .years-wrap .btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
 }
 .years-page .years-wrap h3 {
@@ -513,11 +596,35 @@ body {
   text-align: center;
   line-height: 1.3;
 }
+.years-page .years-wrap .btn-40years {
+  padding-top: 35px;
+}
+.years-page .years-wrap .btn-40years a {
+  position: relative;
+  display: block;
+  padding: 5px 20px;
+  width: 185px;
+  height: 50px;
+  border: 2px solid #6892FF;
+  border-radius: 50px;
+  background: rgba(161, 182, 255, 0.2);
+  transition: all 0.3s;
+}
+.years-page .years-wrap .btn-40years a:hover {
+  background: #6892FF;
+}
+.years-page .years-wrap .btn-40years a p {
+  padding-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+}
 .years-page .years-wrap .box-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 .years-page .years-wrap .year-box {
   display: flex;
@@ -551,28 +658,6 @@ body {
 }
 .years-page .years-wrap .year-box p span {
   font-weight: 500;
-}
-.years-page .years-wrap .btn-40years {
-  padding-top: 35px;
-}
-.years-page .years-wrap .btn-40years a {
-  position: relative;
-  display: block;
-  padding: 5px 20px;
-  height: 50px;
-  border: 2px solid #6892FF;
-  border-radius: 50px;
-  background: rgba(161, 182, 255, 0.2);
-  transition: all 0.3s;
-}
-.years-page .years-wrap .btn-40years a:hover {
-  background: #6892FF;
-}
-.years-page .years-wrap .btn-40years a p {
-  padding-top: 8px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 200;
 }
 
 .research-page {

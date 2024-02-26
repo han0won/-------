@@ -39,6 +39,39 @@ $(document).ready(function() {
   }).scroll(); 
 });
 
+// role, dev 페이지
+
+window.addEventListener('scroll', function() {
+  var rolePage = document.querySelector('.role-page');
+  var roleBg = document.querySelector('.role-area');
+  
+  var devPage = document.querySelector('.dev-page');
+  var devBg = document.querySelector('.dev-area');
+
+  var scrollPosition = window.scrollY;
+
+  var rolePageTop = rolePage.offsetTop;
+  var rolePageHeight = rolePage.offsetHeight;
+  var rolePageBottom = rolePageTop + rolePageHeight;
+
+  var devPageTop = devPage.offsetTop;
+  var devPageHeight = devPage.offsetHeight;
+  var devPageBottom = devPageTop + devPageHeight;
+  
+  if (scrollPosition >= rolePageTop && scrollPosition <= rolePageBottom) {
+      roleBg.classList.add('page-fixed');
+  } else {
+      roleBg.classList.remove('page-fixed');
+  }
+  if (scrollPosition >= devPageTop && scrollPosition <= devPageBottom) {
+    devBg.classList.add('page-fixed');
+  } else {
+    devBg.classList.remove('page-fixed');
+  }
+});
+
+// 끝
+
 // 연구분야 섹션 커서 이미지
 document.addEventListener('DOMContentLoaded', function() {
   var hoverImgs = document.querySelectorAll('.hover-img'); 
