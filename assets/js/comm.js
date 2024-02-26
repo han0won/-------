@@ -40,37 +40,63 @@ $(document).ready(function() {
 });
 
 // role, dev 페이지
-
 window.addEventListener('scroll', function() {
-  var rolePage = document.querySelector('.role-page');
-  var roleBg = document.querySelector('.role-area');
-  
-  var devPage = document.querySelector('.dev-page');
-  var devBg = document.querySelector('.dev-area');
-
   var scrollPosition = window.scrollY;
 
+  var rolePage = document.querySelector('.role-page');
+  var roleBg = document.querySelector('.role-area');
+  var roleTitle = document.querySelector('.role-title');
+  
   var rolePageTop = rolePage.offsetTop;
   var rolePageHeight = rolePage.offsetHeight;
   var rolePageBottom = rolePageTop + rolePageHeight;
+  
+  if (scrollPosition >= rolePageTop && scrollPosition <= rolePageBottom) {
+    roleBg.classList.add('page-fixed');
+    roleTitle.classList.add('title-fixed');
+  } else {
+    roleBg.classList.remove('page-fixed');
+    roleTitle.classList.remove('title-fixed');
+  }
+  
+  var devPage = document.querySelector('.dev-page');
+  var devBg = document.querySelector('.dev-area');
+  var devTitle = document.querySelector('.dev-title');
 
   var devPageTop = devPage.offsetTop;
   var devPageHeight = devPage.offsetHeight;
   var devPageBottom = devPageTop + devPageHeight;
-  
-  if (scrollPosition >= rolePageTop && scrollPosition <= rolePageBottom) {
-      roleBg.classList.add('page-fixed');
-  } else {
-      roleBg.classList.remove('page-fixed');
-  }
+
   if (scrollPosition >= devPageTop && scrollPosition <= devPageBottom) {
     devBg.classList.add('page-fixed');
+    devTitle.classList.add('title-fixed');
   } else {
     devBg.classList.remove('page-fixed');
+    devTitle.classList.remove('title-fixed');
   }
 });
 
-// 끝
+// years 페이지
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+
+  var yearsPage = document.querySelector('.years-page');
+  var yearsBg = document.querySelector('.years-area');
+  var yearsTitle = document.querySelector('.btn-wrap');
+  
+  var yearsPageTop = yearsPage.offsetTop;
+  var yearsPageHeight = yearsPage.offsetHeight;
+  var yearsPageBottom = yearsPageTop + yearsPageHeight;
+
+  if (scrollPosition >= yearsPageTop && scrollPosition <= yearsPageBottom) {
+    yearsBg.classList.add('page-fixed');
+    yearsTitle.classList.add('title-fixed');
+  } else {
+    yearsBg.classList.remove('page-fixed');
+    yearsTitle.classList.remove('title-fixed');
+
+  }
+});
 
 // 연구분야 섹션 커서 이미지
 document.addEventListener('DOMContentLoaded', function() {

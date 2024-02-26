@@ -364,11 +364,21 @@ body {
   left: 0;
 }
 .role-page .role-inner {
-  position: relative;
   margin: 0 auto;
-  padding: 200px 0;
   max-width: 1280px;
   z-index: 1;
+}
+.role-page .title-wrap {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30%;
+}
+.role-page .title-fixed {
+  position: fixed;
 }
 .role-page .roles-list {
   margin-top: 100px;
@@ -478,11 +488,21 @@ body {
   left: 0;
 }
 .dev-page .dev-inner {
-  position: relative;
   margin: 0 auto;
-  padding: 200px 0;
   max-width: 1280px;
   z-index: 1;
+}
+.dev-page .title-wrap {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30%;
+}
+.dev-page .title-fixed {
+  position: fixed;
 }
 .dev-page .dev-list {
   margin-top: 100px;
@@ -495,13 +515,13 @@ body {
   width: 300px;
   height: 400px;
   background: #A1B6FF;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 20px;
   transition: all 0.1s;
 }
 .dev-page .dev-box:nth-child(2) {
   margin-top: 500px;
-  margin-right: 0;
+  margin-left: 80px;
 }
 .dev-page .dev-box:nth-child(3) {
   margin-top: 100px;
@@ -509,7 +529,7 @@ body {
 .dev-page .dev-box:nth-child(4) {
   margin-top: 600px;
   margin-bottom: 200px;
-  margin-right: 0;
+  margin-left: 80px;
 }
 .dev-page .dev-box:hover {
   box-shadow: inset 0 -150px 100px -100px rgba(0, 0, 0, 0.5);
@@ -558,10 +578,6 @@ body {
 
 .years-page {
   position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .years-page .years-area {
   position: absolute;
@@ -577,29 +593,29 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.years-page .years-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  max-width: 1280px;
-  width: 100%;
+.years-page .page-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-.years-page .years-wrap .btn-wrap {
+.years-page .btn-wrap {
+  position: absolute;
+  top: 320px;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
 }
-.years-page .years-wrap h3 {
+.years-page .btn-wrap h3 {
   font-size: 80px;
   text-align: center;
   line-height: 1.3;
 }
-.years-page .years-wrap .btn-40years {
+.years-page .btn-wrap .btn-40years {
   padding-top: 35px;
 }
-.years-page .years-wrap .btn-40years a {
+.years-page .btn-wrap .btn-40years a {
   position: relative;
   display: block;
   padding: 5px 20px;
@@ -610,57 +626,78 @@ body {
   background: rgba(161, 182, 255, 0.2);
   transition: all 0.3s;
 }
-.years-page .years-wrap .btn-40years a:hover {
+.years-page .btn-wrap .btn-40years a:hover {
   background: #6892FF;
 }
-.years-page .years-wrap .btn-40years a p {
+.years-page .btn-wrap .btn-40years a p {
   padding-top: 8px;
   text-align: center;
   font-size: 14px;
   font-weight: 200;
 }
-.years-page .years-wrap .box-wrap {
+.years-page .title-fixed {
+  position: fixed;
+}
+.years-page .card-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  padding: 300px 0 0 40%;
 }
-.years-page .years-wrap .year-box {
+.years-page .year-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 300px;
 }
-.years-page .years-wrap .year-box .year-img {
+.years-page .year-box .year-img {
   margin: 35px 0;
   width: 260px;
   height: 350px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   color: whitesmoke;
-  background-image: url(../../images/years-card1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.years-page .years-wrap .year-box strong {
+.years-page .year-box .img1 {
+  background-image: url(../../images/years-card1.jpg);
+}
+.years-page .year-box .img2 {
+  background-image: url(../../images/years-card2.jpg);
+}
+.years-page .year-box .img3 {
+  background-image: url(../../images/years-card3.jpg);
+}
+.years-page .year-box .img4 {
+  background-image: url(../../images/years-card4.jpg);
+}
+.years-page .year-box .img5 {
+  background-image: url(../../images/years-card5.jpg);
+}
+.years-page .year-box strong {
   position: relative;
   color: #6892FF;
   font-size: 48px;
   font-weight: 500;
   line-height: 1;
 }
-.years-page .years-wrap .year-box p {
+.years-page .year-box p {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
   line-height: 2;
 }
-.years-page .years-wrap .year-box p span {
+.years-page .year-box p span {
   font-weight: 500;
 }
 
 .research-page {
+  position: relative;
+  border-radius: 100px;
+  background: black;
   background-image: url(../../images/bg/bg-research.jpg);
   background-repeat: no-repeat;
 }
