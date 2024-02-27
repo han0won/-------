@@ -592,6 +592,15 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: yearsbg 10s linear infinite;
+}
+@keyframes yearsbg {
+  30% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg2.jpg);
+  }
+  60% {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg3.jpg);
+  }
 }
 .years-page .page-fixed {
   position: fixed;
@@ -639,11 +648,14 @@ body {
   position: fixed;
 }
 .years-page .card-wrap {
+  position: relative;
+  left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 300px 0 0 40%;
+  padding: 300px 0 0;
+  width: 600px;
 }
 .years-page .year-box {
   display: flex;

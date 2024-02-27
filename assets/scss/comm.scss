@@ -272,7 +272,7 @@
         position: absolute;
     }
     .cont-wrap {
-        padding: 250px 0 150px 530px;
+        padding: 250px 0 150px 500px;
     }
 }
 .role-page {
@@ -324,11 +324,11 @@
         border-radius: 50%;
         transition: all 0.2s;
         &:nth-child(2){
-            margin-top: 330px;
+            margin-top: 300px;
             margin-right: 0;
         }
         &:nth-child(4){
-            margin-top: 330px;
+            margin-top: 300px;
             margin-bottom: 200px;
             margin-right: 0;
         }
@@ -514,6 +514,15 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            animation: yearsbg 10s linear infinite;
+        }
+        @keyframes yearsbg {
+            30%{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg2.jpg);
+            }
+            60%{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/years-bg3.jpg);
+            }    
         }
     }
     .page-fixed{
@@ -563,21 +572,20 @@
 
     }
     .card-wrap {
+        position: relative;
+        left: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 300px 0 0 40%;
+        padding: 300px 0 0;
+        width: 600px;
     }
     .year-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 300px;
-        // &:last-child {
-        //     padding-bottom: 0;
-        //     margin-bottom: 100px;
-        // }
         .year-img {
             margin: 35px 0;
             width: 260px;
