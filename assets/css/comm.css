@@ -180,6 +180,11 @@ body {
   background-size: cover;
   background-position: bottom;
 }
+@media screen and (max-width: 1200px) {
+  #header #gnb {
+    display: none;
+  }
+}
 
 .intro-page {
   height: 100vh;
@@ -230,6 +235,11 @@ body {
   }
   100% {
     color: white;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .intro-page .typing-wrap h2 {
+    font-size: 36px;
   }
 }
 
@@ -306,13 +316,14 @@ body {
 .title-page > p {
   padding-top: 60px;
   text-align: center;
-  color: transparent;
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(161, 182, 255) 0%, rgb(40, 88, 255) 70%);
-  -webkit-background-clip: text;
   font-family: "HakgyoansimWoojuR";
   font-size: 28px;
-  font-weight: bold;
   line-height: 50px;
+}
+@media screen and (max-width: 1200px) {
+  .title-page .text-wrap {
+    display: block;
+  }
 }
 
 .sec {
@@ -337,9 +348,41 @@ body {
 }
 .sec .title-wrap {
   position: absolute;
+  top: 200px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30%;
+}
+.sec .title-fixed {
+  position: fixed;
 }
 .sec .cont-wrap {
-  padding: 250px 0 150px 530px;
+  padding: 250px 0 150px 500px;
+}
+@media screen and (max-width: 1200px) {
+  .sec .title-wrap {
+    width: 25%;
+  }
+  .sec .cont-wrap {
+    padding-left: 340px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sec .title-wrap {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .sec .title-wrap {
+    align-items: flex-start;
+    margin-left: 20px;
+    width: auto;
+  }
+  .sec .cont-wrap {
+    padding: 0;
+  }
 }
 
 .role-page {
@@ -368,18 +411,6 @@ body {
   max-width: 1280px;
   z-index: 1;
 }
-.role-page .title-wrap {
-  position: absolute;
-  top: 200px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 30%;
-}
-.role-page .title-fixed {
-  position: fixed;
-}
 .role-page .roles-list {
   margin-top: 100px;
   width: 700px;
@@ -393,11 +424,11 @@ body {
   transition: all 0.2s;
 }
 .role-page .roles:nth-child(2) {
-  margin-top: 330px;
+  margin-top: 300px;
   margin-right: 0;
 }
 .role-page .roles:nth-child(4) {
-  margin-top: 330px;
+  margin-top: 300px;
   margin-bottom: 200px;
   margin-right: 0;
 }
@@ -465,6 +496,27 @@ body {
   font-weight: 300;
   line-height: 1.7;
 }
+@media screen and (max-width: 1000px) {
+  .role-page .roles-list {
+    width: auto;
+  }
+  .role-page .roles,
+  .role-page .roles:nth-child(2),
+  .role-page .roles:nth-child(4) {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .role-page .roles-list {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .role-page .roles:first-child {
+    margin-top: 300px;
+  }
+}
 
 .dev-page {
   position: relative;
@@ -491,18 +543,6 @@ body {
   margin: 0 auto;
   max-width: 1280px;
   z-index: 1;
-}
-.dev-page .title-wrap {
-  position: absolute;
-  top: 200px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 30%;
-}
-.dev-page .title-fixed {
-  position: fixed;
 }
 .dev-page .dev-list {
   margin-top: 100px;
@@ -574,6 +614,45 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 1200px) {
+  .dev-page .dev-box:nth-child(2) {
+    margin-top: 300px;
+    margin-left: 40px;
+  }
+  .dev-page .dev-box:nth-child(3) {
+    margin-top: 0;
+  }
+  .dev-page .dev-box:nth-child(4) {
+    margin-top: 300px;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .dev-page .dev-box:nth-child(2),
+  .dev-page .dev-box:nth-child(3),
+  .dev-page .dev-box:nth-child(4) {
+    margin: 100px 55px 0 0;
+  }
+  .dev-page .dev-box:nth-child(4) {
+    margin-bottom: 200px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .dev-page .devs-list {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .dev-page .dev-box:first-child {
+    margin-top: 400px;
+  }
+  .dev-page .dev-box:nth-child(2),
+  .dev-page .dev-box:nth-child(3),
+  .dev-page .dev-box:nth-child(4) {
+    margin-right: 0;
+  }
 }
 
 .years-page {
@@ -705,6 +784,22 @@ body {
 .years-page .year-box p span {
   font-weight: 500;
 }
+@media screen and (max-width: 1200px) {
+  .years-page .btn-wrap {
+    width: 45%;
+  }
+  .years-page .card-wrap {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .years-page .btn-wrap h3 {
+    font-size: 60px;
+  }
+  .years-page .year-box p {
+    font-size: 14px;
+  }
+}
 
 .research-page {
   position: relative;
@@ -753,6 +848,11 @@ body {
   left: 20px;
   display: none;
   border: 1px solid white;
+}
+@media screen and (max-width: 1000px) {
+  .research-page a p {
+    font-size: 16px;
+  }
 }
 
 .contest-page .sec-inner {
