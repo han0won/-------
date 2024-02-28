@@ -845,7 +845,10 @@ body {
     width: 45%;
   }
   .years-page .card-wrap {
-    width: 40%;
+    width: 50%;
+  }
+  .years-page .year-box p {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -854,6 +857,34 @@ body {
   }
   .years-page .year-box p {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .years-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .years-page .btn-wrap {
+    top: 200px;
+    width: 100%;
+  }
+  .years-page .btn-wrap h3 {
+    font-size: 45px;
+  }
+  .years-page .btn-wrap .btn-40years a {
+    width: 151px;
+  }
+  .years-page .btn-wrap .btn-40years a p {
+    font-size: 12px;
+  }
+  .years-page .card-wrap {
+    left: auto;
+    padding-top: 600px;
+    width: auto;
+  }
+  .years-page .card-wrap strong {
+    font-size: 40px;
   }
 }
 

@@ -761,7 +761,12 @@
             width: 45%;
         }
         .card-wrap {
-            width: 40%;
+            width: 50%;
+        }
+        .year-box {
+            p {
+                font-size: 16px;
+            }
         }
     }
     @media screen and (max-width:1000px) {
@@ -770,6 +775,34 @@
         }
         .year-box p {
             font-size: 14px;
+        }
+    }
+    @media screen and (max-width:750px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .btn-wrap {
+            top: 200px;
+            width: 100%;
+            h3 {
+                font-size: 45px;
+            }
+            .btn-40years {
+                a {
+                    width: 151px;
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .card-wrap {
+            left: auto;
+            padding-top: 600px;
+            width: auto;
+            strong {
+                font-size: 40px;
+            }
         }
     }
 }
