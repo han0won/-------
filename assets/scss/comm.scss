@@ -9,6 +9,10 @@
     text-indent: -9999px;
 }
 
+.mobile-open {
+    display: none;
+}
+
 .default-cursor {
     position: absolute;
     z-index: 2000;
@@ -166,6 +170,22 @@
             font-size: 36px;
         }
     }
+    @media screen and (max-width:750px) {
+        .typing-wrap  {
+            animation: none;
+            h2 {
+                text-align: center;
+            }
+        }
+        .mobile-open {
+            display: block;
+        }
+    }
+    @media screen and (max-width:480px) {
+        .typing-wrap h2 {
+            font-size: 24px;
+        }
+    }
 }
 .title-page {
     display: flex;
@@ -177,8 +197,8 @@
     background-size: cover;
     .text-wrap {
         display: flex;
+        font-size: 100px;
         p {
-            font-size: 100px;
             font-weight: 900;
             color: $point3;
             -webkit-text-stroke: 2px $point3;
@@ -249,7 +269,25 @@
         .text-wrap {
             display: block;
         }
-    
+    }
+    @media screen and (max-width:800px) {
+        .text-wrap {
+            font-size: 70px;
+        }
+        > p {
+            font-size: 22px;
+            line-height: 40px;
+        }
+    }
+    @media screen and (max-width:550px) {
+        padding: 200px 0;
+        .text-wrap {
+            font-size: 40px;
+        }
+        > p {
+            font-size: 16px;
+            line-height: 30px;
+        }
     }
 }
 
@@ -300,18 +338,21 @@
             width: 30%;
         }
     }
-    @media screen and (max-width:425px) {
+    @media screen and (max-width:750px) {
         .title-wrap {
             align-items: flex-start;
             margin-left: 20px;
             width: auto;
         }
         .cont-wrap {
-            padding: 0;
+            padding: 250px 0 500px 0;
         }
+    }
+    @media screen and (max-width:425px) {
 
     }
 }
+
 .role-page {
     position: relative;
     .role-area {
@@ -424,8 +465,14 @@
             margin-top: 100px;
         }
     }
-    // @media screen and (max-width:750px) {
-    // }
+    @media screen and (max-width:750px) {
+        .roles-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 20px;
+        }
+    }
     @media screen and (max-width:425px) {
         .roles-list {
             display: flex;
