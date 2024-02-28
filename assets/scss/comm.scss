@@ -53,6 +53,14 @@
         max-width: 1280px;
         height: 100%;
     }
+    .logo {
+        img {
+            vertical-align: middle;
+        }
+    }
+    .small-hd {
+        display: none;
+    }
     #gnb {
         height: 100%;
         .depth1 {
@@ -118,7 +126,31 @@
     }
     @media screen and (max-width:1200px) {
         #gnb {
-            display: none;
+            // display: none;
+            position: absolute;
+            top: 90px;
+            width: 100vw;
+            .depth1 {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                height: 100vh;
+                background: $point3;
+            }
+            .depth2 {
+                top: 0;
+                left: 100px;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 100vh;
+            }
+            .depth2-bg {
+                display: none;
+            }
+        }
+        .small-hd {
+            display: block;
+            opacity: 0;
         }
     }
 }
