@@ -809,7 +809,7 @@
 
 .research-page {
     position: relative;
-    border-radius: 100px;
+    border-radius: 50px;
     background: black;
     background-image: url(../../images/bg/bg-research.jpg);
     background-repeat: no-repeat;
@@ -857,6 +857,19 @@
     @media screen and (max-width:1000px) {
         a p {
             font-size: 16px;
+        }
+    }
+    @media screen and (max-width:750px) {
+        a p {
+            display: none;
+        }
+        a strong {
+            width: auto;
+        }
+    }
+    @media screen and (max-width:750px) {
+        a strong {
+            font-size: 24px;
         }
     }
 }
@@ -921,6 +934,13 @@
             }
         }
     }
+    @media screen and (max-width:425px) {
+        .sec-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }     
+    }
 }
 
 .end-title {
@@ -937,6 +957,16 @@
     }
     span {
         animation: titlecolor 3s linear infinite alternate;
+    }
+    @media screen and (max-width:750px) {
+        p {
+            font-size: 26px;
+        }
+    }
+    @media screen and (max-width:560px) {
+        .mobile-open {
+            display: block;
+        }
     }
 }
 
@@ -983,17 +1013,29 @@
         padding: 50px 0 50px ;
         filter: grayscale(100%);
     }
-    .f-menu-wrap {
+    ul {
         display: flex;
         padding-bottom: 30px;
+        li {
+            position: relative;
+            padding: 0 6px;
+        }
+        li::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: -3px;
+            display: block;
+            margin: 0 3px;
+            width: 1px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        li:first-child::before {
+            display: none;
+        }
         a {
             color: rgba(255, 255, 255, 0.7);
-        }
-        span {
-            width: 1px;
-            height: 20px;
-            margin: 0 3px;
-            color: white;
         }
     }
     .sns-wrap {
@@ -1018,5 +1060,38 @@
         padding-bottom: 30px;
         font-size: 14px;
         opacity: 50%;
+    }
+    @media screen and (max-width:600px) {
+        ul li::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -3px;
+            display: block;
+            margin: 0 3px;
+            width: 1px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        a {
+            font-size: 12px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .mobile-open {
+            display: block;
+        }
+    }
+    @media screen and (max-width:450px) {
+        ul {
+            display: none;
+        }
+        p {
+            font-size: 12px;
+        }
+        .copyright {
+            font-size: 11px;
+        }
     }
 }

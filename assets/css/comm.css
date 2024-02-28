@@ -890,7 +890,7 @@ body {
 
 .research-page {
   position: relative;
-  border-radius: 100px;
+  border-radius: 50px;
   background: black;
   background-image: url(../../images/bg/bg-research.jpg);
   background-repeat: no-repeat;
@@ -939,6 +939,19 @@ body {
 @media screen and (max-width: 1000px) {
   .research-page a p {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .research-page a p {
+    display: none;
+  }
+  .research-page a strong {
+    width: auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .research-page a strong {
+    font-size: 24px;
   }
 }
 
@@ -1000,6 +1013,13 @@ body {
 .contest-page .slide-wrap .slide-text span {
   font-weight: 100;
 }
+@media screen and (max-width: 425px) {
+  .contest-page .sec-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
 
 .end-title {
   padding: 200px 0 180px;
@@ -1016,6 +1036,16 @@ body {
 }
 .end-title span {
   animation: titlecolor 3s linear infinite alternate;
+}
+@media screen and (max-width: 750px) {
+  .end-title p {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .end-title .mobile-open {
+    display: block;
+  }
 }
 
 .moving-list {
@@ -1062,18 +1092,30 @@ body {
   padding: 50px 0 50px;
   filter: grayscale(100%);
 }
-#footer .f-menu-wrap {
+#footer ul {
   display: flex;
   padding-bottom: 30px;
 }
-#footer .f-menu-wrap a {
-  color: rgba(255, 255, 255, 0.7);
+#footer ul li {
+  position: relative;
+  padding: 0 6px;
 }
-#footer .f-menu-wrap span {
-  width: 1px;
-  height: 20px;
+#footer ul li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -3px;
+  display: block;
   margin: 0 3px;
-  color: white;
+  width: 1px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.7);
+}
+#footer ul li:first-child::before {
+  display: none;
+}
+#footer ul a {
+  color: rgba(255, 255, 255, 0.7);
 }
 #footer .sns-wrap {
   display: flex;
@@ -1097,4 +1139,37 @@ body {
   padding-bottom: 30px;
   font-size: 14px;
   opacity: 50%;
+}
+@media screen and (max-width: 600px) {
+  #footer ul li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -3px;
+    display: block;
+    margin: 0 3px;
+    width: 1px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #footer a {
+    font-size: 12px;
+  }
+  #footer p {
+    font-size: 14px;
+  }
+  #footer .mobile-open {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  #footer ul {
+    display: none;
+  }
+  #footer p {
+    font-size: 12px;
+  }
+  #footer .copyright {
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=comm.css.map */
