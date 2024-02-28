@@ -348,9 +348,6 @@
             padding: 250px 0 500px 0;
         }
     }
-    @media screen and (max-width:425px) {
-
-    }
 }
 
 .role-page {
@@ -464,21 +461,23 @@
         .roles:nth-child(4) {
             margin-top: 100px;
         }
-    }
-    @media screen and (max-width:750px) {
         .roles-list {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            padding-right: 50px;
+        }
+    }
+    @media screen and (max-width:750px) {
+        .roles-list {
             padding-right: 20px;
         }
     }
     @media screen and (max-width:425px) {
         .roles-list {
-            display: flex;
-            flex-direction: column;
             align-content: center;
             flex-wrap: wrap;
+            padding-right: 0;
         }
         .roles:first-child {
             margin-top: 300px;
@@ -603,21 +602,27 @@
         .dev-box:nth-child(4) {
             margin-bottom: 200px;
         }
-    }
-    @media screen and (max-width:425px) {
         .devs-list {
             display: flex;
             flex-direction: column;
-            align-content: center;
-            flex-wrap: wrap;
-        }
-        .dev-box:first-child {
-            margin-top: 400px;
+            align-items: flex-end;
+            padding-right: 50px;
         }
         .dev-box:nth-child(2),
         .dev-box:nth-child(3),
         .dev-box:nth-child(4) {
             margin-right: 0;
+        }
+    }
+    @media screen and (max-width:425px) {
+        .devs-list {
+            align-content: center;
+            flex-wrap: wrap;
+            padding-right: 0;
+
+        }
+        .dev-box:first-child {
+            margin-top: 400px;
         }
     }
 }

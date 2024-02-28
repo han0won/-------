@@ -425,6 +425,7 @@ body {
     padding: 250px 0 500px 0;
   }
 }
+
 .role-page {
   position: relative;
 }
@@ -545,21 +546,23 @@ body {
   .role-page .roles:nth-child(4) {
     margin-top: 100px;
   }
-}
-@media screen and (max-width: 750px) {
   .role-page .roles-list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .role-page .roles-list {
     padding-right: 20px;
   }
 }
 @media screen and (max-width: 425px) {
   .role-page .roles-list {
-    display: flex;
-    flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+    padding-right: 0;
   }
   .role-page .roles:first-child {
     margin-top: 300px;
@@ -685,21 +688,26 @@ body {
   .dev-page .dev-box:nth-child(4) {
     margin-bottom: 200px;
   }
-}
-@media screen and (max-width: 425px) {
   .dev-page .devs-list {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-  }
-  .dev-page .dev-box:first-child {
-    margin-top: 400px;
+    align-items: flex-end;
+    padding-right: 50px;
   }
   .dev-page .dev-box:nth-child(2),
   .dev-page .dev-box:nth-child(3),
   .dev-page .dev-box:nth-child(4) {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .dev-page .devs-list {
+    align-content: center;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+  .dev-page .dev-box:first-child {
+    margin-top: 400px;
   }
 }
 
