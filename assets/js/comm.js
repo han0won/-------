@@ -11,16 +11,17 @@ document.addEventListener('mousemove', (e) => {
 
 // 헤더
 document.addEventListener("DOMContentLoaded", function() {
-  const gnb = document.getElementById("gnb");
-  const depth2Bg = document.querySelector(".depth2-bg");
+  if(window.innerWidth >=1201) {
+    const gnb = document.getElementById("gnb");
+    const depth2Bg = document.querySelector(".depth2-bg");
 
-  gnb.addEventListener("mouseover", function() {
-      depth2Bg.style.display = "block";
-  });
-
-  gnb.addEventListener("mouseout", function() {
-      depth2Bg.style.display = "none";
-  });
+    gnb.addEventListener("mouseover", function() {
+        depth2Bg.style.display = "block";
+    });
+    gnb.addEventListener("mouseout", function() {
+        depth2Bg.style.display = "none";
+    });
+  }
 });
 
 // 타이틀 섹션 텍스트 나타나는 효과

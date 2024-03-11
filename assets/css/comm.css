@@ -192,9 +192,9 @@ body {
 }
 @media screen and (max-width: 1200px) {
   #header #gnb {
-    display: none;
     position: absolute;
     top: 90px;
+    left: 0;
     width: 100vw;
   }
   #header #gnb .depth1 {
@@ -204,19 +204,29 @@ body {
     height: 100vh;
     background: #2858FF;
   }
+  #header #gnb .depth1 > li {
+    display: flex;
+    width: 100%;
+  }
+  #header #gnb .depth1 > li a {
+    width: 10%;
+  }
   #header #gnb .depth2 {
-    top: 0;
-    left: 100px;
-    flex-direction: column;
+    position: static;
+    margin: 0;
+    height: auto;
     justify-content: space-around;
-    height: 100vh;
   }
   #header #gnb .depth2-bg {
     display: none;
   }
   #header .small-hd {
     display: block;
-    opacity: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  #header .logo img {
+    height: 40px;
   }
 }
 

@@ -126,9 +126,10 @@
     }
     @media screen and (max-width:1200px) {
         #gnb {
-            display: none;
+            // display: none;
             position: absolute;
             top: 90px;
+            left: 0;
             width: 100vw;
             .depth1 {
                 flex-direction: column;
@@ -136,13 +137,19 @@
                 align-items: flex-start;
                 height: 100vh;
                 background: $point3;
+                > li {
+                    display: flex;
+                    width: 100%;
+                    a {
+                        width: 10%;
+                    }
+                }
             }
             .depth2 {
-                top: 0;
-                left: 100px;
-                flex-direction: column;
+                position: static;
+                margin: 0;
+                height: auto;
                 justify-content: space-around;
-                height: 100vh;
             }
             .depth2-bg {
                 display: none;
@@ -150,7 +157,11 @@
         }
         .small-hd {
             display: block;
-            opacity: 0;
+        }
+    }
+    @media screen and (max-width:480px) {
+        .logo img {
+            height: 40px;
         }
     }
 }
