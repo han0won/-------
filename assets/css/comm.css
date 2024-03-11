@@ -192,6 +192,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   #header #gnb {
+    display: none;
     position: absolute;
     top: 90px;
     width: 100vw;
