@@ -24,6 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+$(document).ready(function(){
+  $(".small-hd").click(function() {
+    $(".depth1").toggle();
+  });
+  $('.depth1 > li').click(function(){
+      $(this).children('.depth2').toggle();
+  });
+}); 
+
 // 타이틀 섹션 텍스트 나타나는 효과
 $(document).ready(function() {
   $(window).scroll(function() {

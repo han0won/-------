@@ -191,33 +191,47 @@ body {
   background-position: bottom;
 }
 @media screen and (max-width: 1200px) {
-  #header #gnb {
+  #header #gnb .depth1 {
     position: absolute;
     top: 90px;
     left: 0;
-    width: 100vw;
-  }
-  #header #gnb .depth1 {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 100vh;
-    background: #2858FF;
+    display: none;
+    width: 100%;
+    height: auto;
   }
   #header #gnb .depth1 > li {
-    display: flex;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    height: auto;
+    padding: 0;
+    border-bottom: 1px solid white;
   }
   #header #gnb .depth1 > li a {
-    width: 10%;
+    padding: 15px 20px;
   }
   #header #gnb .depth2 {
     position: static;
-    margin: 0;
-    height: auto;
-    justify-content: space-around;
+    display: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    visibility: visible;
+    border-top: 1px solid white;
+    background: rgba(255, 255, 255, 0.9);
   }
-  #header #gnb .depth2-bg {
+  #header #gnb .depth2 li {
+    padding: 10px 0;
+    width: 100%;
+  }
+  #header #gnb .depth2 li a {
+    color: black;
+  }
+  #header #gnb .depth2 li:hover {
+    background-color: #2858FF;
+  }
+  #header #gnb .depth2 li:hover a {
+    color: white;
+  }
+  #header #gnb .btn-search {
     display: none;
   }
   #header .small-hd {
