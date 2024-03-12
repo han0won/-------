@@ -10,22 +10,8 @@ document.addEventListener('mousemove', (e) => {
 })
 
 // 헤더
-document.addEventListener("DOMContentLoaded", function() {
-  if(window.innerWidth >=1201) {
-    const gnb = document.getElementById("gnb");
-    const depth2Bg = document.querySelector(".depth2-bg");
-
-    gnb.addEventListener("mouseover", function() {
-        depth2Bg.style.display = "block";
-    });
-    gnb.addEventListener("mouseout", function() {
-        depth2Bg.style.display = "none";
-    });
-  }
-});
-
 $(document).ready(function(){
-  $(".small-hd").click(function() {
+  $(".gnb-bar").click(function() {
     $(".depth1").toggle();
   });
   $('.depth1 > li').click(function(){
