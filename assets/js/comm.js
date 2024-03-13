@@ -35,72 +35,54 @@ $(document).ready(function() {
   }).scroll(); 
 });
 
-// role, dev 페이지
+// role, dev, years 페이지
 window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
+  const scrollPosition = window.scrollY;
 
-  var rolePage = document.querySelector('.role-page');
-  var roleBg = document.querySelector('.role-area');
-  var roleTitle = document.querySelector('.role-title');
-  
-  var rolePageTop = rolePage.offsetTop;
-  var rolePageHeight = rolePage.offsetHeight;
-  var rolePageBottom = rolePageTop + rolePageHeight;
-  
-  if (scrollPosition >= rolePageTop && scrollPosition <= rolePageBottom) {
-    roleBg.classList.add('page-fixed');
-    roleTitle.classList.add('title-fixed');
-  } else {
-    roleBg.classList.remove('page-fixed');
-    roleTitle.classList.remove('title-fixed');
-  }
-  
-  var devPage = document.querySelector('.dev-page');
-  var devBg = document.querySelector('.dev-area');
-  var devTitle = document.querySelector('.dev-title');
+  const pages = [
+    {
+      pageClass: '.role-page',
+      bgClass: '.role-area',
+      titleClass: '.role-title'
+    },
+    {
+      pageClass: '.dev-page',
+      bgClass: '.dev-area',
+      titleClass: '.dev-title'
+    },
+    {
+      pageClass: '.years-page',
+      bgClass: '.years-area',
+      titleClass: '.btn-wrap'
+    },
+  ];
 
-  var devPageTop = devPage.offsetTop;
-  var devPageHeight = devPage.offsetHeight;
-  var devPageBottom = devPageTop + devPageHeight;
+  pages.forEach(function(page) {
+    const pageElement = document.querySelector(page.pageClass);
+    const bgElement = document.querySelector(page.bgClass);
+    const titleElement = document.querySelector(page.titleClass);
 
-  if (scrollPosition >= devPageTop && scrollPosition <= devPageBottom) {
-    devBg.classList.add('page-fixed');
-    devTitle.classList.add('title-fixed');
-  } else {
-    devBg.classList.remove('page-fixed');
-    devTitle.classList.remove('title-fixed');
-  }
-});
+    const pageTop = pageElement.offsetTop;
+    const pageHeight = pageElement.offsetHeight;
+    const pageBottom = pageTop + pageHeight;
 
-// years 페이지
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-
-  var yearsPage = document.querySelector('.years-page');
-  var yearsBg = document.querySelector('.years-area');
-  var yearsTitle = document.querySelector('.btn-wrap');
-  
-  var yearsPageTop = yearsPage.offsetTop;
-  var yearsPageHeight = yearsPage.offsetHeight;
-  var yearsPageBottom = yearsPageTop + yearsPageHeight;
-
-  if (scrollPosition >= yearsPageTop && scrollPosition <= yearsPageBottom) {
-    yearsBg.classList.add('page-fixed');
-    yearsTitle.classList.add('title-fixed');
-  } else {
-    yearsBg.classList.remove('page-fixed');
-    yearsTitle.classList.remove('title-fixed');
-
-  }
+    if (scrollPosition >= pageTop && scrollPosition <= pageBottom) {
+      bgElement.classList.add('page-fixed');
+      titleElement.classList.add('title-fixed');
+    } else {
+      bgElement.classList.remove('page-fixed');
+      titleElement.classList.remove('title-fixed');
+    }
+  })
 });
 
 // 연구분야 섹션 커서 이미지
 document.addEventListener('DOMContentLoaded', function() {
-  var hoverImgs = document.querySelectorAll('.hover-img'); 
+  const hoverImgs = document.querySelectorAll('.hover-img'); 
 
   hoverImgs.forEach(function(link) {
-    var cursor = link.querySelector('.img-cursor'); 
-    var cursorImg = cursor.querySelector('img');
+    const cursor = link.querySelector('.img-cursor'); 
+    const cursorImg = cursor.querySelector('img');
 
     link.addEventListener('mouseenter', function() {
       cursorImg.style.display = 'block'; 
@@ -111,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.addEventListener('mousemove', function(e) {
-      var x = e.clientX;
-      var y = e.clientY;
+      const x = e.clientX;
+      const y = e.clientY;
 
       cursor.style.left = x + 'px';
       cursor.style.top = y + 'px';
